@@ -1,3 +1,5 @@
+import { Quiz } from "./trivia.js";
+
 export class UI {
   constructor() {}
 
@@ -16,5 +18,30 @@ export class UI {
 
       opciones.append(button);
     }
+  }
+  showScore(score) {
+    let nombre;
+    nombre = prompt("¿Cual es tu nombre?");
+
+    const quizEndhtml = `
+            <h1>Result</h1>
+      <h2> ${nombre} your score is: ${score}</h2>
+            `;
+    const resultado = document.getElementById("quiz");
+    resultado.innerHTML = quizEndhtml;
+  }
+  showProgress(currentIndex, total) {
+    const elemento = document.getElementById("progreso");
+    elemento.innerHTML = `Question ${currentIndex} of ${total}`;
+  }
+  showLevel(score){
+      if(score==5){
+        console.log('su nivel es bueno')
+      }else if(score==4){
+    
+            console.log('Su nivel es basico')
+        
+      }if(score==3){console.log('su nivel es bajo')}
+
   }
 }
