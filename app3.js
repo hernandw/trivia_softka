@@ -1,6 +1,6 @@
 import { questions } from "./questions.js";
-import { Quiz } from "./models/trivia.js";
-import { UI } from "./models/ui.js";
+import { Quiz } from "./models/trivia3.js";
+import { UI } from "./models/ui3.js";
 
 const renderPage = (quiz, ui) => {
   if (quiz.isEndend()) {

@@ -1,5 +1,5 @@
 import { questions } from "../questions.js";
-import { Quiz } from "./trivia.js";
+import { Quiz } from "./trivia2.js";
 
 export class UI {
   constructor() {}
@@ -30,13 +30,13 @@ export class UI {
     const quizEndhtml2 = `
             <h1>Felicitaciones has pasado al siguiente nivel</h1>
             <h2> ${nombre} your score is: ${score}</h2>
-            <a href="index2.html">Continuar</a>
+            <a href="index3.html">Continuar</a>
             `;
 
-    if (score < 5) {
+    if (score < 10) {
       const resultado = document.getElementById("quiz");
       resultado.innerHTML = quizEndhtml;
-    } else if (score < 10) {
+    } else if (score < 15) {
       const resultado = document.getElementById("quiz");
       resultado.innerHTML = quizEndhtml2;
     }

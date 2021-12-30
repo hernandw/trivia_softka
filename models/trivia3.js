@@ -3,13 +3,13 @@ import { questions } from "../questions.js";
 
 export class Quiz {
   questionIndex = 0;
-  score = 0;
+  score = 10;
   constructor(questions) {
     this.questions = questions;
   }
   getQuestionIndex() {
     
-      this.questions = questions.filter((item) => item.level === "basic");
+      this.questions = questions.filter((item) => item.level === "advanced");
       return this.questions[this.questionIndex];
     
   }
@@ -23,5 +23,4 @@ export class Quiz {
     }
     this.questionIndex++;
   }
-  
 }
